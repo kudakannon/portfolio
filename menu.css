@@ -1,0 +1,73 @@
+#navmenu{
+	position: absolute;
+	left: -20px;
+	top:50px;
+}
+ul li{
+	list-style: none;
+}
+ul li ul li{
+	list-style:  none;
+	display: none;
+}
+
+#navmenuicon{
+	background-image: url('images/icons/menu.png');
+	background-size: 100% ;
+	height: 50px;
+	width: 50px;
+}
+#home{
+	background-image: url('images/icons/home.png');
+	background-size: 100% ;
+	height: 50px;
+	width: 50px;
+	opacity: 0;
+	animation-name: opening;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.1s;
+}
+#shop{
+	background-image: url('images/icons/shop.png');
+	background-size: 100% ;
+	height: 50px;
+	width: 50px;
+	opacity: 0;
+	animation-name: opening;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.2s;
+}
+#message{
+	background-image: url('images/icons/message.png');
+background-size: 100% ;
+	height: 50px;
+	width: 50px;
+	opacity: 0;
+	animation-name: opening;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.3s;
+}
+#gallery{
+	background-image: url('images/icons/gallery.png');
+	background-size: 100% ;
+	height: 50px;
+	width: 50px;
+	opacity: 0;
+	animation-name: opening;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.4s;
+}
+@keyframes opening{
+	from{
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}

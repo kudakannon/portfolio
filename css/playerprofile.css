@@ -1,0 +1,26 @@
+
+#userID{
+
+}
+.hp{
+	position: absolute;
+	top: 0px;
+	left:0px;
+	color: white;
+}
+#addID{
+	font-size: 20px;
+	padding: 0;
+	top:10px;
+	height: 25px;
+	width: 25px;
+}
+#backside{
+	left:12.5px;
+}
+#username{
+	position: absolute;
+	left:47px;
+	top:10px;
+	font-size: 20px
+}

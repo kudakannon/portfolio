@@ -1,84 +1,383 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Daily UI: 001</title>
-	<script></script>
-	<style>
-		body{
-			font-size: 1.5em;
-			background-image: /*linear-gradient(to right,blue 0%,red 100%);*/ url("bg.jpg");
-			background-repeat: no-repeat;
-  			background-size: cover;
-		}
-		.container{
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			left: 0%;
-			top: 0%;
-		}
-		.signin_c{
-			position: absolute;
-			width: 25%;
-			height: 75%;
-			top: 9.375%;
-			left: 37.5%;
-			border-radius: 50px;
-			background-color: rgba(250,250,250,0.9);
-		}
-		.signin_d{
-			text-align: center;
-			position: absolute;
-			left: 25%;
-			width: 50%;
-			height: 30px;
-			
-		}
-		.signin_i{
-			position: relative;
-			width: 100%;
-			height: 100%;
-		}
-		.signin_t{
-			position: absolute;
-			text-align: center;
-			left: 0%;
-			top: 10%;
-			width: 100%;
-		}
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		#signin_u{
-			top: 30%;
-		}
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
 
-		#signin_p{
-			top: 50%;
-		}
+	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="apple-touch-icon" href="favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="favicon.ico"/>
+	
+		
+	<title>Stephen Horsburgh</title>
+	<script>
+		var left0 = 0;
+		var nx0= .1;
+		var left1 = 400;
+		var nx1= .2;
+		var left2 = 300;
+		var nx2= .3;
+		var left3 = 1000;
+		var nx3= .4;
+		var left4 = 200;
+		var nx4= .5
+		var left5 = 700;
+		var nx5= .6;
+		var left6 = 500;
+		var nx6= .7;
+		var left7 = 600;
+		var nx7= .8;
+		var left8 = 0;
+		var nx8= .9;
+		var left9 = 200;
+		var nx9= 1.0;
+		var left10 = 800;
+		var nx10= 1.1;
+		var screenWidth = screen.width;
+	function aniClouds(){
+		t = setInterval(function(){
+				left0 = left0 + nx0;
+				left1 = left1 + nx1;
+				left2 = left2 + nx2;
+				left3 = left3 + nx3;
+				left4 = left4 + nx4;
+				left5 = left5 + nx5;
+				left6 = left6 + nx6;
+				left7 = left7 + nx7;
+				left8 = left8 + nx8;
+				left9 = left9 + nx9;
+				left10 = left10 + nx10;
+				document.getElementById('cloud0').style.left = left0 + 'px';
+				document.getElementById('cloud1').style.left = left1 + 'px';
+				document.getElementById('cloud2').style.left = left2 + 'px';
+				document.getElementById('cloud3').style.left = left3 + 'px';
+				document.getElementById('cloud4').style.left = left4 + 'px';
+				document.getElementById('cloud5').style.left = left5 + 'px';
+				document.getElementById('cloud6').style.left = left6 + 'px';
+				document.getElementById('cloud7').style.left = left7 + 'px';
+				document.getElementById('cloud8').style.left = left8 + 'px';
+				document.getElementById('cloud9').style.left = left9 + 'px';
+				document.getElementById('cloud10').style.left = left10 + 'px';
 
-		#signin_b{
-			top: 70%;
-			height: 50px;
-			text-align: center;
-		}
-		#b_signin{
-			border-radius: 20px;
-			border-width: 0px;
-			background-color: pink;
-		}
 
-	</style>
+
+				if( left0 > screenWidth){
+				left0 = -800;
+				}
+				if( left1 > screenWidth){
+				left1 = -800;
+				}
+				if( left2 > screenWidth){
+				left2 = -800;
+				}
+				if( left3 > screenWidth){
+				left3 = -800;
+				}
+				if( left4 > screenWidth){
+				left4 = -800;
+				}
+				if( left5 > screenWidth){
+				left5 = -800;
+				}
+				if( left6 > screenWidth){
+				left6 = -800;
+				}
+				if( left7 > screenWidth){
+				left7 = -800;
+				}
+				if( left8 > screenWidth){
+				left8 = -800;
+				}
+				if( left9 > screenWidth){
+				left9 = -800;
+				}
+				if( left0 > screenWidth){
+				left0 = -800;
+				}
+				if( left10 > screenWidth){
+				left10 = -800;
+				}						
+			}, 10);
+		}
+	
+	var w = 500;
+
+	function zoomin(){
+		var t = document.getElementById('parrallex').scrollTop;
+			var tr = document.getElementById('trailer');
+
+		var h = screenWidth / 2;
+		var f = w + (t*2);
+		var x = f/2;
+		var o = 1-(t/1000);
+		var cl = h - x;
+
+		document.getElementById('castle').style.width = f + 'px';
+		document.getElementById('castle').style.left = cl +'px';
+		document.getElementById('cloud0').style.width = f + 'px';
+		document.getElementById('cloud1').style.width = f + 'px';
+		document.getElementById('cloud2').style.width = f + 'px';
+		document.getElementById('cloud3').style.width = f + 'px';
+		document.getElementById('cloud4').style.width = f + 'px';
+		document.getElementById('cloud5').style.width = f + 'px';
+		document.getElementById('cloud6').style.width = f + 'px';
+		document.getElementById('cloud7').style.width = f + 'px';
+		document.getElementById('cloud8').style.width = f + 'px';
+		document.getElementById('cloud9').style.width = f + 'px';
+		document.getElementById('cloud10').style.width = f + 'px';
+		document.getElementById('cloud5').style.top = f + 'px';
+		document.getElementById('cloud6').style.top = f + 'px';
+		document.getElementById('cloud7').style.top = f + 'px';
+		document.getElementById('cloud8').style.top = f + 'px';
+		document.getElementById('cloud9').style.top = f + 'px';
+		document.getElementById('cloud10').style.top = f + 'px';
+		 document.getElementById('parrallex').style.opacity = o;
+		console.log(t);
+document.title = t;
+		if (t>= 500){
+		document.getElementById('parrallex').style.display ='none';
+		}
+		//  if (t>= 300){
+		// 	const playPromise = tr.play();
+		// 	if (playPromise !== null){
+		// 		playPromise.catch(() => {tr.play();});
+		// 	}
+		// }
+		 if (t >=300){
+		 	tr.play()
+		 }
+		// console.log(f);
+		// document.getElementById("scrolling").innerHTML = x += 1;
+		// console.log("yup");
+	}
+
+	function exit(event){
+		var y = event.deltaY;
+		var sy = 0;
+		if (y>0){
+			sy+=1;
+		}
+		else if (y<0){
+			sy-=1;
+		}
+		else if(y==0){
+			sy+= 0;
+		}
+		console.log(sy)
+		if(sy<0){
+		document.getElementById('parrallex').style.display ='inline';
+		}
+	}
+	</script>
+<style>
+
+	@font-face{
+
+	 font-family: SAOfont;
+	    src: url(fonts/SAOfont.ttf);
+	    font-style: normal;
+	    font-weight:200;
+	}
+	body{
+		
+		background-repeat: no-repeat;
+		background-size: cover;
+		/*background-attachement: fixed;*/
+		/*overflow-y: hidden;*/
+		overflow-x: hidden;
+	}
+	h1{
+		font-family: SAOfont;
+		font-size: 65px;
+		color: white;
+		position: absolute;
+		
+		left:25%;
+	}
+	#descript{
+		font-family: SAOfont;
+		font-size: 25px;
+		color: white;
+		position: absolute;
+		top: 100px;
+		left:30%;
+	}
+	#parrallex{
+		background-image: url('sky.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 		130% ;
+		width:			120%;
+		overflow: 		auto;
+		left:			-10%;
+		top: 			-5%;
+		position:		absolute;
+		opacity: 1;
+		z-index: 1;
+		/*	overflow-y: hidden;*/
+		overflow-x: hidden;		
+	}
+
+	#castle{
+		width: 500px;
+		position: absolute;
+		left: 27%;
+		top:5rem;
+		transform: translateZ(0px);
+		
+
+	}
+	.clouds{
+		
+		height: 30%;
+		width: 500px;
+		position: absolute;
+		left: 0%;
+		top:70%;
+	}
+	#cloud0{
+
+		left:0%;
+	}
+	#cloud1{
+		left:0%;
+		top: 25%
+	}
+	#cloud2{
+		left:20%;
+		top:50%;
+	}
+	#cloud3{
+
+		left:30%;
+	}
+	#cloud4{
+		left:40%;
+		top:0%;
+	}
+	#cloud5{
+		left:60%;
+		top:75%;
+	}
+	#cloud6{
+		left:0%
+		top:80%;
+	}
+	#cloud7{
+		left:10%;
+		top: 80%;
+	}
+	#cloud8{
+		left:20%;
+		top:80%;
+	}
+	#cloud9{
+		left:30%;
+		top:20%;
+	}
+	#cloud10{
+		left:60%;
+		top:60%;	
+	}
+	#stretcher{
+		font-family: SAOfont;
+		font-size: 25px;
+		color: white;
+		position: absolute;
+		top: 10000000px;
+		left:30%;
+	}
+/*	#trailer{
+		top: 0;
+		left:0;
+		position: fixed;
+		padding: 0;
+		border: 0;
+		margin: 0;
+		width:100%; 
+		height:400px; 
+		z-index: 0;
+	}*/
+</style>
+
 </head>
-<body>
-	<div class="container">
-		<div class="signin_c">
-			<div class="signin_t"><h1>Sign In</h1></div>
-			<div id="signin_u"  class="signin_d">Username<input class="signin_i" type="text" ></div>
-			<div id="signin_p" class="signin_d">Password<input class="signin_i" type="password"> <a href="" >forgot username or password</a> </div>
-			<div id="signin_b" class="signin_d"><input type="button" class="signin_i" id="b_signin" value="Sign In"><a href=""> Create new account</a></div>
-		</div>
+<body onload="aniClouds()" >
+	<div id="parrallex" onscroll="zoomin()" >
+	<h1>Welcome To Sword Art Online</h1>
+		<img src="cloud0.png" alt="" class= "clouds" id="cloud0">
+		<img src="cloud1.png" alt="" class= "clouds" id="cloud1">
+		<img src="cloud2.png" alt="" class= "clouds" id="cloud2">
+		<img src="cloud3.png" alt="" class= "clouds" id="cloud3">
+		<img src="cloud4.png" alt="" class= "clouds" id="cloud4">
+		<img src="aincrad1.png" alt="" id="castle" >
+		<img src="cloud5.png" alt="" class= "clouds" id="cloud5">
+		<img src="cloud6.png" alt="" class= "clouds" id="cloud6">
+		<img src="cloud7.png" alt="" class= "clouds" id="cloud7">
+		<img src="cloud8.png" alt="" class= "clouds" id="cloud8">
+		<img src="cloud9.png" alt="" class= "clouds" id="cloud9">
+		<img src="cloud10.png" alt="" class= "clouds" id="cloud10">
+		
+		<p id="descript">scroll down to enter the amazing world of Aincrad</p>
+	
+		<div id="stretcher"><p>this is the end</p></div>
 	</div>
 
-  
+<div onmousewheel="exit(event)" ><video id ="trailer" controls>
+		<source  src="videos/sword-art-online-official-trailer.mp4" type="video/mp4" />
+	</video></div>
+
+<p>this is the end</p>
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+<p>this is the end</p>
+
+
+
+
+
+
 </body>
+
 </html>

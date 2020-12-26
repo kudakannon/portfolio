@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="apple-touch-icon" href="favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="favicon.ico"/>
+	<link rel="stylesheet" href="menu.css" type="text/css">
+	
+		
+	<title>Stephen Horsburgh</title>
+	<script>
+	</script>
+	<style>
+		body{
+			background-image: url('images/background/Lisbeth_item.png');
+			background-size: cover;
+		}
+		#item{
+			background-color: rgba(255,255,255,0.5);
+			position: absolute;
+			left: 100px;
+			height:500px;
+			width:500px;
+			border-style: solid;
+			border-color: black;
+			border-width: 1px;
+		}
+		#descript{
+			background-color: rgba(255,255,255,0.5);
+			position: absolute;
+			height:350px;
+			width:500px;
+			left:600px;
+			top: 138px;
+			padding: 10px; 
+			border-style: solid;
+			border-color: black;
+			border-width: 1px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="item"></div>
+	<div id="descript">
+		<div id="heads"><h1 id="productName">Product name</h1></div>
+		<div id="price" ><h2 id="pricing">Price</h2></div>
+		<div id="txt">this is the product you selected</div>
+		<input type="submit" name="entercart" value="Add to cart">
+	</div>
+
+	<ul id="navmenu" onclick="openMenu()">
+		<li><div id="navmenuicon" ></div>
+			<ul>
+				<a href="index2.php"><li id="home"></li></a>
+				<a href="shop.php"><li id="shop"></li></a>
+				<a href="message.php"><li id="message"></li></a>
+				<a href="gallery.php"><li id="gallery"></li></a>
+			</ul>
+		</li>
+	</ul>
+<script type="text/javascript">
+	var open=false;
+	function openMenu(){
+		if(open==false){
+			document.getElementById('home').style.display = 'block';
+			document.getElementById('shop').style.display = 'block';
+			document.getElementById('message').style.display = 'block';
+			document.getElementById('gallery').style.display = 'block';
+			open=true;
+		}else
+		{
+			document.getElementById('home').style.display = 'none';
+			document.getElementById('shop').style.display = 'none';
+			document.getElementById('message').style.display = 'none';
+			document.getElementById('gallery').style.display = 'none';
+			open=false;
+		}
+	}
+</script>
+</body>
+
+</html>

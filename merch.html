@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="apple-touch-icon" href="favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="favicon.ico"/>
+	
+		
+	<title>Shop</title>
+	<script>
+	</script>
+	<style>
+		@font-face{
+			font-family: SAOfont;
+		    src: url(fonts/SAOfont.ttf);
+		    font-style: normal;
+		    font-weight:200;
+			}
+	body{
+			font-family: SAOfont;
+			font-size: 30px;
+			color: white;
+			background-image: url(images/background/agil-shop.png);
+		}
+
+ul {
+	list-style: none;
+
+}
+#topMenu ul li{
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#topMenu{
+	position: absolute;
+	left: 150px;
+	top:;
+}
+#leftMenu{
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	height: 850px;
+}
+#shop{
+	position: absolute;
+	border-style: solid;
+	border-color: #32F6FF;
+	border-width: 2px;
+	top: 100px;
+	left:200px;
+	width: 80%;
+	height:940px;
+	background-color: rgba(255,255,255,0.4);
+}
+.minMenu{
+	background-color: rgba(255,255,255,0);
+	color: white;
+	font-size: 30px;
+	border-style: none;
+}
+
+	</style>
+
+</head>
+<body>
+	<div id="topMenu">
+		<ul>	
+			<li>Children</li>
+			<li>Teens</li>
+			<li>Men</li>
+			<li>Women</li>
+			<li>Acessories</li>
+			<li><input type="text" name="" id="search" placeholder="Search.."/></li>
+		</ul>
+		
+	</div>
+	<div id="leftMenu">
+		<ul>	
+			<li>Item <input type="button" name="" value="-" id="bItem" class="minMenu">
+				<ul>	
+					<li class="items">Dresses</li>
+					<li class="items">shirts</li>
+					<li class="items">Jumpers</li>
+					<li class="items">Pants</li>
+					<li class="items">Underware</li>
+					<li class="items">Jewlery</li>
+				</ul>
+			</li>
+			<li>Age <input type="button" name="" value="-" id="bAge" class="minMenu">
+				<ul>	
+					<li class="age">0-5</li>
+					<li class="age">5-10</li>
+					<li class="age">10-15</li>
+					<li class="age">15-18</li>
+					<li class="age">18++</li>
+				</ul>
+			</li>
+			<li>Size <input type="button" name="" value="-" id="bSize" class="minMenu">
+				<ul>	
+					<li class="size">XS</li>
+					<li class="size">S</li>
+					<li class="size">M</li>
+					<li class="size">L</li>
+					<li class="size">XL</li>
+					<li class="size">XXL</li>
+				</ul>
+			</li>
+			<li>Characture <input type="button" name="" value="-" id="bCharacture" class="minMenu"> 
+				<ul>	
+					<li class="characture">Kirito</li>
+					<li class="characture">Asuna</li>
+					<li class="characture">Klien</li>
+					<li class="characture">Agial</li>
+					<li class="characture">Lizbeth</li>
+					<li class="characture">Cilika</li>
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+	<div id="shop"></div>
+	
+</body>
+
+</html>

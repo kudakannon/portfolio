@@ -1,0 +1,335 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="apple-touch-icon" href="favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="favicon.ico"/>
+	
+		
+	<title>Stephen Horsburgh</title>
+	<script>
+		// var cloudes = new Array(10);
+		// var left= new Array(10);
+		// var nx= new Array(10);
+
+		// for(i = 0; 1<cloudes.length; i++){
+		// 	left[i] = Math.random()*screenWidth;
+		// 	nx[i] = Math.random();
+		// 	left[i]=left[i]+nx[i];
+		// 	document.getElementById('cloud'+cloudes[i]).style.left = left[i] + 'px';
+		// }
+		var x = 0;
+
+
+
+		var left0 = 0;
+		var nx0= .1;
+		var left1 = 400;
+		var nx1= .2;
+		var left2 = 300;
+		var nx2= .3;
+		var left3 = 1000;
+		var nx3= .4;
+		var left4 = 200;
+		var nx4= .5
+		var left5 = 700;
+		var nx5= .6;
+		var left6 = 500;
+		var nx6= .7;
+		var left7 = 600;
+		var nx7= .8;
+		var left8 = 0;
+		var nx8= .9;
+		var left9 = 200;
+		var nx9= 1.0;
+		var left10 = 800;
+		var nx10= 1.1;
+		var screenWidth = screen.width;
+	function aniClouds(){
+		t = setInterval(function(){
+				left0 = left0 + nx0;
+				left1 = left1 + nx1;
+				left2 = left2 + nx2;
+				left3 = left3 + nx3;
+				left4 = left4 + nx4;
+				left5 = left5 + nx5;
+				left6 = left6 + nx6;
+				left7 = left7 + nx7;
+				left8 = left8 + nx8;
+				left9 = left9 + nx9;
+				left10 = left10 + nx10;
+				document.getElementById('cloud0').style.left = left0 + 'px';
+				document.getElementById('cloud1').style.left = left1 + 'px';
+				document.getElementById('cloud2').style.left = left2 + 'px';
+				document.getElementById('cloud3').style.left = left3 + 'px';
+				document.getElementById('cloud4').style.left = left4 + 'px';
+				document.getElementById('cloud5').style.left = left5 + 'px';
+				document.getElementById('cloud6').style.left = left6 + 'px';
+				document.getElementById('cloud7').style.left = left7 + 'px';
+				document.getElementById('cloud8').style.left = left8 + 'px';
+				document.getElementById('cloud9').style.left = left9 + 'px';
+				document.getElementById('cloud10').style.left = left10 + 'px';
+
+				if( left0 > screenWidth){
+				left0 = -800;
+				}
+				if( left1 > screenWidth){
+				left1 = -800;
+				}
+				if( left2 > screenWidth){
+				left2 = -800;
+				}
+				if( left3 > screenWidth){
+				left3 = -800;
+				}
+				if( left4 > screenWidth){
+				left4 = -800;
+				}
+				if( left5 > screenWidth){
+				left5 = -800;
+				}
+				if( left6 > screenWidth){
+				left6 = -800;
+				}
+				if( left7 > screenWidth){
+				left7 = -800;
+				}
+				if( left8 > screenWidth){
+				left8 = -800;
+				}
+				if( left9 > screenWidth){
+				left9 = -800;
+				}
+				if( left0 > screenWidth){
+				left0 = -800;
+				}
+				if( left10 > screenWidth){
+				left10 = -800;
+				}						
+			}, 10);
+		}
+	
+	var w = 300;
+
+	function zoomin(){
+		var t = document.getElementById('parralex').scrollTop;
+		var f = w + t;
+		document.getElementById('castle').style.width = f + 'px';
+		console.log(t);
+		console.log(f);
+		// document.getElementById("scrolling").innerHTML = x += 1;
+		// console.log("yup");
+	}
+	</script>
+
+<style>
+
+	body{
+		background-image: url('sky.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		/*background-attachement: fixed;*/
+		overflow-y: hidden;
+		overflow-x: hidden;
+
+	}
+
+	#parralex{
+		height: 		100%;
+		width:			100%;
+		overflow: 		auto;
+		border: 		1px solid black;
+		z-index:		1;
+		position:		absolute;
+		top:			0;
+		left:	 		0;
+/*	overflow-y: hidden;*/
+		overflow-x: hidden;		
+	}
+
+	#castle{
+		width: 300px;
+		position: fixed;
+		margin-right: 10rem;
+		margin-left: 10rem;
+		margin-top:5rem;
+		margin-bottom: 5rem;
+		transform: translateZ(0px);
+	}
+	.clouds{
+		
+		height: 30%;
+		width: 500px;
+		position: absolute;
+		left: 0%;
+		top:70%;
+	}
+	#cloud0{
+
+		left:0%;
+	}
+	#cloud1{
+		left:0%;
+		top: 25%
+	}
+	#cloud2{
+		left:20%;
+		top:50%;
+	}
+	#cloud3{
+
+		left:30%;
+	}
+	#cloud4{
+		left:40%;
+		top:0%;
+	}
+	#cloud5{
+		left:60%;
+		top:75%;
+	}
+	#cloud6{
+		left:0%
+		top:80%;
+	}
+	#cloud7{
+		left:10%;
+		top: 80%;
+	}
+	#cloud8{
+		left:20%;
+		top:80%;
+	}
+	#cloud9{
+		left:30%;
+		top:20%;
+	}
+	#cloud10{
+		left:60%;
+		top:60%;	
+	}
+
+	</style>
+
+</head>
+<body onload="aniClouds()" >
+	<div id="parralex" onscroll="zoomin()">
+		<img src="cloud0.png" alt="" class= "clouds" id="cloud0">
+		<img src="cloud1.png" alt="" class= "clouds" id="cloud1">
+		<img src="cloud2.png" alt="" class= "clouds" id="cloud2">
+		<img src="cloud3.png" alt="" class= "clouds" id="cloud3">
+		<img src="cloud4.png" alt="" class= "clouds" id="cloud4">
+		<img src="aincrad1.png" alt="" id="castle" >
+		<img src="cloud5.png" alt="" class= "clouds" id="cloud5">
+		<img src="cloud6.png" alt="" class= "clouds" id="cloud6">
+		<img src="cloud7.png" alt="" class= "clouds" id="cloud7">
+		<img src="cloud8.png" alt="" class= "clouds" id="cloud8">
+		<img src="cloud9.png" alt="" class= "clouds" id="cloud9">
+		<img src="cloud10.png" alt="" class= "clouds" id="cloud10">
+		<p> scrolling <span id="scrolling">0</span> times</p>
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+<p></p>
+<p></p>		
+
+	</div>
+
+
+</body>
+
+</html>
